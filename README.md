@@ -31,3 +31,5 @@ We'll start by asking what we want our service to do.
 - Return movies by lenght
 
 For that we need MovieRepository, for testing will implement a mock of this with mockito
+
+Use a SetUp like a movies repository. Tag **@Before**: runs before the tests to prepare the environment.
