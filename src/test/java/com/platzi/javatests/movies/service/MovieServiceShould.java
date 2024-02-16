@@ -53,6 +53,11 @@ public class MovieServiceShould {
         assertThat(getMovieIds(movies), CoreMatchers.is(Arrays.asList(2, 3, 4, 5, 6)) );
     }
 
+     // Refactor extract method getMovieIds: generate a method from a code line
+    // List<Integer> movieIds = movies.stream()map(Movie::getId)collect(Collector.tolist())
+    //And remplace all lines we have use it getMovieIds(movies) and inline
+
+
     private List<Integer> getMovieIds(Collection<Movie> movies) {
         return movies.stream().map(Movie::getId).collect(Collectors.toList());
     }
